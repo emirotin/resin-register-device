@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Switched to using the standardised resin-lint module for linting.
+- Changed `register()` to work with the new device registration flow.
+- Changed `generateUUID()` to `generateUniqueKey()` to reflect that it should now be used for both generating a uuid and an api key.
 
 ## [2.1.0] - 2016-02-18
 

@@ -3,15 +3,12 @@ before_install:
   - npm -g install npm@latest
 matrix:
   include:
-
-    # Only run tests in Sauce Labs for 0.12
-    # to avoid unnecessary running VMs
-    - node_js: "0.12"
-      env: SAUCE_LABS=true
+    - node_js: "6.0"
       script:
         - npm test
-        - karma start
-
+    - node_js: "0.12"
+      script:
+        - npm test
     - node_js: "0.11"
       script:
         - npm test
